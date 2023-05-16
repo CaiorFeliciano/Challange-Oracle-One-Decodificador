@@ -1,0 +1,296 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    background-color:#F3F5FC;
+    position: relative;
+    height: 100vh;
+}
+
+.logo{
+    position: absolute;
+    top: 40px;
+    left: 84px;
+    width: 31px;
+    height: 48px ;
+}
+
+.encrypt-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #0a3871;
+    resize: none;
+    width: 600px;
+    height: 300px;
+    margin-left: 240px;
+    margin-top: 168px;
+    background-color: #F3F5FC;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    border: none;
+}
+
+.encrypt-text::-webkit-scrollbar {
+    display: none;
+}
+
+.encrypt-text::placeholder {
+    color: #0a3871;
+}
+
+.encrypt-text:focus {
+    outline: none;
+}
+
+
+.warning {
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    width: 230px;
+    color: #495057;
+    margin-left: 36px;
+    margin-bottom: 4px;
+}
+
+.warning::before {
+    position: absolute;
+    content: '';
+    background-image: url('assets/img/warning.png');
+    width: 16px;
+    height: 16px;
+    top: 1px;
+    left: -24px;
+}
+
+.encrypt-btn {
+    font-family: 'Inter', sans-serif;
+    line-height: 19.36px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    width: 280px;
+    padding: 24px;
+    border-radius: 24px;
+    background-color: #0A3871;
+    border: 1px solid #0A3871;
+    margin: 12px;
+    cursor: pointer;
+}
+
+.encrypt-btn:hover {
+    background-color: #092e5c;
+}
+
+.encrypt-btn:active{
+    box-shadow: inset 4px 4px 12px #121131,
+                inset -4px -4px 12px #1b1a4d;
+}
+
+.decrypt-btn {
+    font-family: 'Inter', sans-serif;
+    line-height: 19.36px;
+    text-align: center;
+    font-size: 16px;
+    color: #0A3871;
+    width: 280px;
+    padding: 24px;
+    border-radius: 24px;
+    background-color: #F3F5FC;
+    border: 1px solid #0A3871;
+    margin: 12px;
+    cursor: pointer;
+}
+
+.decrypt-btn:hover {
+    background-color: #e0e2e6;
+}
+
+.decrypt-btn:active {
+    box-shadow: inset 4px 4px 12px #7c7e80,
+                inset -4px -4px 12px #949596;
+}
+
+textarea#result {
+    position: absolute;
+    display: block;
+    float: left;
+    width: 400px;
+    height: 500px;
+    left: 900px;
+    top: 40px;
+    background: white;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0, 08);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+div#img {
+    position: absolute;
+    display: block;
+    left: 990px;
+    top: 80px;
+    font-size: 150px;
+}
+
+div#msg-none {
+    position: absolute;
+    display: block;
+    left: 950px;
+    top: 370px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Inter';
+}
+
+button#copy {
+    position: absolute;
+    display: none;
+    left: 1060px;
+    top: 450px;
+    height: 60px;
+    width: 110px;
+    background: #D8DFE8;
+    color: black;
+    box-sizing: border-box;
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    cursor: pointer;
+}
+
+button#copy:hover {
+    background: #0A3871;
+    color: white;
+    transition: 800ms;
+}
+footer {
+    text-align: center;
+    font-family: 'Inter';
+    color: #092e5c;
+    padding-top: 15px;
+}
+
+@media screen and (max-width: 1290px) {
+    .encrypt-text {
+        margin-left: 70px;
+        width: 590px;
+    }
+
+    .encrypt-box {
+        left: 70px;
+    }
+
+    .box {
+        width: 300px;
+    }
+
+    .copy-btn {
+        width: 236px;
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .encrypt-text {
+        order: 2;
+        font-size: 28px;
+        text-align: center;
+        margin-left: 0;
+        min-height: 290px;
+        height: auto;
+    }
+
+    .encrypt-box {
+        order: 3;
+        left: 0;
+        max-width: none;
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .btn-box {
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    .encrypt-btn {
+        width: calc(50% - 2.64%);
+    }
+
+    .decrypt-btn {
+        width: calc(50% - 2.64%);
+    }
+
+    textarea#result{
+        left: 10px;
+        top: 800px;
+        width: 350px;
+        height: 311px;
+        font-size: 24px;
+    }
+
+    div#img {
+        left: 470px;
+        top: 560px;
+    }
+
+    img#img-detective {
+        width: 200px;
+        height: 300px;
+    }
+
+    div#msg-none {
+        left: 30px;
+        top: 800px;
+        font-size: 21px;
+    }
+
+    button#copy {
+        left: 365px;
+        top: 795px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .encrypt-text {
+        width: 80%;
+    }
+
+    .btn-box {
+        flex-wrap: wrap;
+    }
+
+    .encrypt-btn {
+        width: 100%;
+    }
+
+    .decrypt-btn {
+        width: 100%;
+    }
+
+    .copy-btn {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .warning {
+        width: auto;
+    }
+} 
